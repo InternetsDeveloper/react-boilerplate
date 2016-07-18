@@ -36,3 +36,28 @@ gulp.task('less', function () {
         .pipe(less())
         .pipe(gulp.dest('./src/public/css'));
 });
+
+// Compile - JSX Files
+gulp.task('react', function () {
+    return gulp.src('./src/public/jsx/**/*.js', {
+            read: false
+        })
+        .pipe(tap(function (file) {
+            gutil.log('bundling ' + file.path);
+
+            file.contents = browserify(file.path).transform('babelify', {
+                presets: ['es2015', 'react']
+            }).bundle()
+        }))
+        .pipe(buffer())
+        .pipe(uglify())
+        .pipe(gulp.dest('./src/public/js/components'));
+});
+
+// Watch Changes / Run Defined Tasks
+gulp.task('watch', function () {
+    gulp.watch(['./src/public/less/**/*.less'], ['less']);
+    gulp.watch(['./src/public/jsx/*.js'], ['react']);
+});
+
+gulp.task('default', ['watch', 'server']);
