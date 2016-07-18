@@ -1,0 +1,17 @@
+{
+  "name": "react-boilerplate",
+  "description": "React Boilerplate",
+  "main": "gulpfile.js",
+  "authors": [
+    "InternetsDeveloper"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/InternetsDeveloper/react-boilerplate",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
