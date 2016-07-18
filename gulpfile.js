@@ -29,3 +29,10 @@ gulp.task('server', function () {
         server.start.bind(server)()
     });
 });
+
+// Transpiling - LESS to CSS
+gulp.task('less', function () {
+    return gulp.src('./src/public/less/style.less')
+        .pipe(less())
+        .pipe(gulp.dest('./src/public/css'));
+});
