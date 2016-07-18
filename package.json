@@ -1,0 +1,19 @@
+{
+  "name": "react-boilerplate",
+  "version": "1.0.0",
+  "description": "React Boilerplate",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InternetsDeveloper/react-boilerplate.git"
+  },
+  "author": "InternetsDeveloper",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/InternetsDeveloper/react-boilerplate/issues"
+  },
+  "homepage": "https://github.com/InternetsDeveloper/react-boilerplate#readme"
+}
